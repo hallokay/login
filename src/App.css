@@ -1,0 +1,284 @@
+header {
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  background: #000;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  color: #eee;
+}
+
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu li {
+  padding: .8rem;
+}
+/* list */
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+}
+
+.item:first-child {
+  margin: 0;
+}
+
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus, 
+.item svg:hover {
+  color: red;
+  outline: none;
+}
+
+/* add Form */
+.addForm {
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-start;
+  margin: .5rem 0 0;
+  padding: 0 .5rem .25rem;
+  border-bottom: .5px solid #eee;
+}
+
+.addForm label {
+  position: absolute;
+  left: -9999px;
+}
+
+.addForm input[type='text'] {
+  flex-grow: 1;
+  max-width: calc(100% -50px);
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+.addForm button {
+  min-width: 48px;
+  border-radius: .25rem;
+  padding: .5rem;
+  font-size: 1rem;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  margin-left: .3rem;
+  color: rgb(14, 102, 190);
+}
+
+
+.addForm button:focus, 
+.addForm button:hover {
+  color: white;
+  background-color: limegreen;
+  outline: none;
+}
+/* search Form  */
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.searchForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.searchForm input[type='text'] {
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || UTILITY CLASSES */
+
+.remove-button {
+  display: none;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.split-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+input:invalid {
+  outline: 2px solid red;
+  background-color: rgb(255, 255, 139);
+}
+
+
+/* || GENERAL STYLES */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(skyblue, darkblue);
+  padding: 1rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.barmarker-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.barmarker {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.barmarker:is(:not(:last-child)) {
+  border-right: 1px solid #000;
+}
+
+.progress {
+  width: 100%;
+  height: 24px;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 0.75rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.form-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.button:focus {
+  outline: 2px solid gold;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
